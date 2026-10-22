@@ -1,0 +1,128 @@
+Create a Roblox GUI script named "Zexart V1" with the following specifications:
+
+═══════════════════════════════════════
+📡 LOADSTRING SUPPORT
+═══════════════════════════════════════
+- Script must work BOTH ways:
+  A) Direct exec (paste full code in executor)
+  B) Loadstring exec: loadstring(game:HttpGet("URL"))()
+- Include a loadstring-ready version at the top of the file
+- Support raw GitHub / Pastebin / private host URLs
+- Handle HTTP failures gracefully with pcall + fallback message
+- Print "Zexart V1 | Loading..." in console on start
+- Print "Zexart V1 | Loaded ✓" on success
+- Print error trace if loadstring fails
+- Compatible with executors that block HttpGet (fallback to 
+  clipboard / manual paste)
+- Anti-duplicate: if script already loaded, destroy old GUI first
+- Set a global flag: _G.ZexartV1Loaded = true
+
+═══════════════════════════════════════
+🎨 DESIGN & UI
+═══════════════════════════════════════
+- Theme: BLACK (#0a0a0a) + NEON PURPLE (#8b00ff, #a020f0)
+- Modern rounded frame, blur backdrop, black→purple gradient
+- Title "Zexart V1" bold + purple glow, animated subtitle
+- Draggable toggle button + smooth TweenService open/close
+- Tabs: Combat | Troll | Player | Visual | Misc | Fun | Utility | Settings
+- Scrollable frames, purple hover effects, search bar filter
+- Popup notification on feature activation
+- Keybind toggle: RightShift
+- Loading screen with purple progress bar → "Zexart V1 Loaded ✓"
+- Feature count badge per tab
+- Config save/load buttons (session only)
+
+═══════════════════════════════════════
+🌐 MULTI-LANGUAGE SUPPORT
+═══════════════════════════════════════
+- Language switcher dropdown in Settings
+- Supported: English (default), Spanish, Indonesian, Arabic (RTL)
+- All labels, tooltips, notifications translate dynamically
+- Table: Lang = { en = {...}, es = {...}, id = {...}, ar = {...} }
+- Function setLanguage(code) updates all UI live
+
+═══════════════════════════════════════
+⚔️ COMBAT (10 features)
+═══════════════════════════════════════
+Kill aura, auto-clicker, hitbox expander, reach extender,
+silent aim (visual), auto-parry, damage indicator (fake),
+aimbot (nearest), auto-block, weapon ESP
+
+═══════════════════════════════════════
+😈 TROLL (30 features)
+═══════════════════════════════════════
+Fling, dolphin emote attach, chaos particle spam, ear rape,
+chat spammer, teleport loop, orbit chaos, fake lag swarm,
+skybox cancer, nametag troll, spin+ragdoll, bring all,
+part rain, freeze target, mirror move, auto emote loop,
+flip camera, fake death, target rainbow, size chaos,
+invisible wall, banana peel, tickle particle, disco light,
+sound spam, explosion VFX, teleport to sky, head spin,
+confuse controls, pet spam
+
+═══════════════════════════════════════
+👤 PLAYER (20 features)
+═══════════════════════════════════════
+Speed hack, jump power, fly, noclip, infinite jump,
+anti-AFK, full bright, player ESP, hitbox expander,
+god mode (client), auto-respawn, walk on water,
+anti-ragdoll, anti-fling, auto-heal (client), CFrame
+teleport, save/load position, sit/stand, character resize,
+remove accessories
+
+═══════════════════════════════════════
+👁️ VISUAL (20 features)
+═══════════════════════════════════════
+Rainbow skybox, FOV slider, remove textures, purple trail,
+purple aura, custom nametag, tracers, box ESP, skeleton ESP,
+chams, full-bright, ambient color, bloom/blur toggle,
+time of day slider, fog slider, remove shadows, crosshair,
+watermark, FPS counter, ping counter
+
+═══════════════════════════════════════
+🎮 FUN (18 features)
+═══════════════════════════════════════
+Dance loop, emote spam, self-ragdoll, fake disconnect,
+fake ban screen, fake admin, meme soundboard, rainbow char,
+size morph, spin fast, jump chaos, fire trail, fake pet,
+aura glow, name flipper, fake VIP tag, fake dev badge,
+fake donator title
+
+═══════════════════════════════════════
+🔧 UTILITY (20 features)
+═══════════════════════════════════════
+Server hop, rejoin, copy Game ID, copy Job ID, FPS unlocker,
+ping display, auto-respawn, auto-reconnect, account info,
+game info, server info, screenshot, chat log, player list,
+console command box, remote spy (client), instance browser,
+workspace explorer, backpack viewer, inventory viewer
+
+═══════════════════════════════════════
+⚙️ TECHNICAL
+═══════════════════════════════════════
+- Compatible executors: Delta, Fluxus, Arceus X, Codex,
+  Hydrogen, Wave, Solara, Xeno, Trigon
+- Standalone (self-contained, but also loadstring-ready)
+- Support R6 & R15
+- All remotes wrapped in pcall
+- Modular functions for performance
+- Safe handling of Free Models / missing parts
+- Basic detection bypass
+- Universal maps: Brookhaven, Natural Disaster, Adopt Me,
+  Bloxburg, MM2, Arsenal, Jailbreak, Da Hood, etc.
+- Feature toggles persist while script runs
+- Anti-break: one feature error doesn't kill others
+- Cleanup function: unload script + destroy GUI + restore 
+  camera/lighting/skybox to original state
+
+═══════════════════════════════════════
+📋 OUTPUT
+═══════════════════════════════════════
+- Full single-file Lua, ready to exec OR loadstring
+- Clean comments per section
+- No placeholders — every function must actually work
+- Complete 4-language translation table
+- Feature list organized in tables for easy expansion
+- Include example loadstring usage at the top as a comment:
+  -- loadstring(game:HttpGet("https://raw.githubusercontent.com/
+  -- user/repo/main/ZexartV1.lua"))()
